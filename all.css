@@ -70,7 +70,8 @@ body{
 .personal h1{
     font-size: 80px;
     font-weight: bold;
-    width: 274px;
+    /* 助教說html裡設<br>，CSS就不用設寬度 */
+    /* width: 274px; */
     line-height: 1.1875;
     margin-top: 40px;
     margin-bottom: 24px;
@@ -92,8 +93,6 @@ body{
 
 .title{
     margin-bottom: 8px;
-    /* display: flex;
-    align-items: center; */
 }
 
 .title-block{
@@ -126,9 +125,10 @@ body{
     color: white;
 }
 
-.title-block{
+/* 助教說不用這段。因為.block{text-align: center;}就起置中效果了 */
+/* .title-block{
     justify-content: center;
-}
+} */
 
 .block{
     background: #415165;
@@ -147,8 +147,11 @@ body{
 
 .block h2{
     margin: 0 auto;
-    width: 996px;
     border-bottom: 1px solid white;
+}
+
+.block .skills h2{
+    width: 996px;
 }
 
 .skills h2{    
@@ -160,9 +163,13 @@ body{
 }
 
 .skills-list{ 
-    width: 224px;
+    /* 助教說不用限制寬度，加上 display: inline-block; 就好 */
+    /* width: 224px; */
+    display: inline-block;
     text-align: left;
-    margin: 0 auto;
+
+    /* 加上 display: inline-block;就不用這句，因為.block{text-align: center;}就起置中效果了。但如果是用width: 224px;就需要這句 */
+    /* margin: 0 auto; */
     padding-left: 24px;
     border-left: 1px solid white;
 }
